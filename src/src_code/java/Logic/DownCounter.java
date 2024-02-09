@@ -16,7 +16,7 @@ public class DownCounter {
         timer.scheduleAtFixedRate(new TimerTask() {
 
             public void run() {
-                System.out.println(setInterval());
+                System.out.println(setInterval()); //Ez hajtódik végre a számláló belsejében
 
             }
         }, delay, period);
@@ -24,7 +24,7 @@ public class DownCounter {
 
     private int setInterval() {
         if (interval == 1)
-            timer.cancel();
+            timer.cancel(); //Ez állítja le a számlálót
         return --interval;
     }
 
